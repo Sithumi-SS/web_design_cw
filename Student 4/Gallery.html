@@ -6,12 +6,21 @@
     <title>Gallery Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            color: #FFFFFF;
-            background-color: #000000;
+            font-family: monospace;
+            font-size: larger;
+            color: #000000;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1{
+            font-family:Arial, Helvetica, sans-serif;
+            color:#3CB371;  
         }
         
         .thumbnail {
+            font-family: 'Times New Roman', Times, serif;
+            color:solid #000000;
             display: inline-block;
             margin: 10px;
             border: 2px solid transparent;
@@ -44,53 +53,106 @@
         }
 
         .extended-content p {
-            color: #000;
+            color: #000000;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #3CB371;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #000000;
         }
     </style>
 </head>
 <body>
+    <h1>Hello! Welcome to the Gallery page</h1>
+    
+    <nav>
+        <a href="#protecting-animals">Protecting Animals</a>
+        <a href="#endangered-species">Endangered Species</a>
+        <a href="#forests">Forests</a>
+        <a href="#explore-biodiversity">Explore Biodiversity</a>
+    </nav>
+    <br><br><br><br>
 
-<div id="gallery">
-    <div class="thumbnail" onclick="showExtendedView(1)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
-        <img src="thumbnail1.jpg" alt="Thumbnail 1" width="200" height="150">
-    </div>
-    <div class="thumbnail" onclick="showExtendedView(2)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
-        <img src="thumbnail2.jpg" alt="Thumbnail 2" width="200" height="150">
-    </div>
+    <div id="gallery">
+        
+        <div class="thumbnail" onclick="showExtendedView(1)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/forest-1.jpg?token=GHSAT0AAAAAACP6I4K3MGHRBK7G5L6FXYTAZQDWUAA" alt="Thumbnail 1" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(2)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail2.jpg" alt="Thumbnail 2" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(3)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 3" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(4)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 4" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(5)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 5" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(6)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 6" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(7)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 7" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(8)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 8" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(9)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 9" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(10)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 10" width="200" height="150">
+        </div>
+        <div class="thumbnail" onclick="showExtendedView(11)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
+            <img src="thumbnail1.jpg" alt="Thumbnail 11" width="200" height="150">
+        </div>
 
-    <div class="extended-view" id="extendedView1">
-        <div class="extended-content">
-            <img src="fullimage1.jpg" alt="Full Image 1" style="max-width: 100%;">
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+        <div class="extended-view" id="extendedView1">
+            <div class="extended-content">
+                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/forest-1.jpg?token=GHSAT0AAAAAACP6I4K3MGHRBK7G5L6FXYTAZQDWUAA" alt="Full Image 1" style="max-width: 100%;">
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+            </div>
+        </div>
+        <div class="extended-view" id="extendedView2">
+            <div class="extended-content">
+                <img src="fullimage2.jpg" alt="Full Image 2" style="max-width: 100%;">
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+            </div>
         </div>
     </div>
-    <div class="extended-view" id="extendedView2">
-        <div class="extended-content">
-            <img src="fullimage2.jpg" alt="Full Image 2" style="max-width: 100%;">
-            <p>Description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-        </div>
-    </div>
-</div>
 
-<script>
-    function showExtendedView(id) {
-        var extendedView = document.getElementById("extendedView" + id);
-        extendedView.style.display = "block";
-        window.onclick = function(event) {
-            if (event.target == extendedView) {
-                extendedView.style.display = "none";
+    <script>
+        function showExtendedView(id) {
+            var extendedView = document.getElementById("extendedView" + id);
+            extendedView.style.display = "block";
+            window.onclick = function(event) {
+                if (event.target == extendedView) {
+                    extendedView.style.display = "none";
+                }
             }
         }
-    }
 
-    function hoverEffect(element) {
-        element.style.borderColor = '#3CB371';
-    }
+        // JavaScript function for hover effect on thumbnails
+        function hoverEffect(element) {
+            element.style.borderColor = '#3CB371'; 
+        }
 
-    function unHoverEffect(element) {
-        element.style.borderColor = 'transparent';
-    }
-</script>
+        function unHoverEffect(element) {
+            element.style.borderColor = 'transparent'; 
+        }
+    </script>
 
 </body>
 </html>
