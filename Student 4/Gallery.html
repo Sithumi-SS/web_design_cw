@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Page</title>
     <style>
-        /* CSS for customization */
         body {
             font-family: Arial, sans-serif;
-            color: #FFFFFF; /* default font color */
-            background-color: #000000; /* default background color */
+            color: #FFFFFF;
+            background-color: #000000;
         }
         
         .thumbnail {
@@ -21,7 +20,7 @@
         }
         
         .thumbnail:hover {
-            border-color: #3CB371; /* Green border color on hover */
+            border-color: #3CB371;
         }
         
         .extended-view {
@@ -45,43 +44,35 @@
         }
 
         .extended-content p {
-            color: #000; /* Description font color */
+            color: #000;
         }
     </style>
 </head>
 <body>
 
-<!-- Gallery Page Content -->
 <div id="gallery">
-    <!-- Thumbnail Images -->
     <div class="thumbnail" onclick="showExtendedView(1)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
         <img src="thumbnail1.jpg" alt="Thumbnail 1" width="200" height="150">
     </div>
     <div class="thumbnail" onclick="showExtendedView(2)" onmouseover="hoverEffect(this)" onmouseout="unHoverEffect(this)">
         <img src="thumbnail2.jpg" alt="Thumbnail 2" width="200" height="150">
     </div>
-    <!-- Add more thumbnails as needed -->
 
-    <!-- Extended Views -->
     <div class="extended-view" id="extendedView1">
         <div class="extended-content">
             <img src="fullimage1.jpg" alt="Full Image 1" style="max-width: 100%;">
             <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
-            <!-- Add customization options here -->
         </div>
     </div>
     <div class="extended-view" id="extendedView2">
         <div class="extended-content">
             <img src="fullimage2.jpg" alt="Full Image 2" style="max-width: 100%;">
             <p>Description: Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-            <!-- Add customization options here -->
         </div>
     </div>
-    <!-- Add more extended views as needed -->
 </div>
 
 <script>
-    // JavaScript function to show extended view
     function showExtendedView(id) {
         var extendedView = document.getElementById("extendedView" + id);
         extendedView.style.display = "block";
@@ -92,13 +83,12 @@
         }
     }
 
-    // JavaScript function for hover effect on thumbnails
     function hoverEffect(element) {
-        element.style.borderColor = '#3CB371'; // Green color on hover
+        element.style.borderColor = '#3CB371';
     }
 
     function unHoverEffect(element) {
-        element.style.borderColor = 'transparent'; // Reset border color on hover out
+        element.style.borderColor = 'transparent';
     }
 </script>
 
