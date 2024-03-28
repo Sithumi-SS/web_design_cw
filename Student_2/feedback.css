@@ -1,11 +1,11 @@
-.body {
+body {
     font-family: "Comic Sans", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #d4e9d4;
 }
 
-.header {
+header {
     color: #3CB371;
     text-align: center;
 }
@@ -28,14 +28,14 @@
     margin-bottom: 20px;
 }
 
-.label {
+label {
     font-weight: bold;
 }
 
-.input[type="text"],
-.input[type="email"],
-.textarea,
-.select {
+input[type="text"],
+input[type="email"],
+textarea,
+select {
     width: 100%;
     padding: 10px;
     border: 1px solid #a2d9ce; /* Light green border */
@@ -44,12 +44,12 @@
     background-color: #f0fff9; /* Light green background */
 }
 
-.input[type="radio"],
-.input[type="checkbox"] {
+input[type="radio"],
+input[type="checkbox"] {
     margin-right: 10px;
 }
 
-.button[type="submit"] {
+button[type="submit"] {
     background-color: #3CB371; /* Lighter green */
     color: white;
     padding: 10px 20px;
@@ -59,11 +59,11 @@
     float: right;
 }
 
-.button[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #2E8B57; /* Darker green on hover */
 }
 
-.footer {
+footer {
     color: #fff;
     padding: 10px 0;
     text-align: center;
