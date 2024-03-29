@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery Page</title>
+    <title>Gallery </title>
     <style>
         body {
             font-family: monospace;
@@ -11,11 +11,21 @@
             color: #000000;
             background-color: #f2f2f2;
             text-align: center;
+            margin: 0; 
         }
+
+        .black-box {
+            background-color: #000;
+            padding: 20px ;
+            color: #fff;
+            
+        }
+
 
         h1{
             font-family: Arial, Helvetica, sans-serif;
             color: #3CB371;  
+            margin-top: 0; 
         }
         
         .thumbnail {
@@ -26,18 +36,13 @@
             border: 2px solid transparent;
             transition: border-color 0.3s;
             cursor: pointer;
-            width: auto; /* Set the width of the thumbnail */
-            height: auto; /* Automatically adjust height to maintain aspect ratio */
-        }
-
-        
-        .thumbnail:hover {
-            border-color: #3CB371;
+            width: auto; 
+            height: auto; 
         }
 
         .thumbnail img {
-            max-width: 2000px; /* Set the maximum width of the thumbnail images */
-            height: 200px; /* Automatically adjust height to maintain aspect ratio */
+            max-width: 5000px; 
+            height: 200px; 
         }
 
         
@@ -45,13 +50,13 @@
             display: none;
             position: fixed;
             top: 0;
-            left: 100%; /* Initial position off the screen */
+            left: 100%; 
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
             z-index: 9999;
             overflow: auto;
-            animation: slideFromLeft 0.5s ease forwards; /* Animation to slide in from left */
+            animation: slideFromLeft 0.5s ease forwards; 
         }
 
         /* Keyframes for the slide animation */
@@ -88,111 +93,203 @@
         }
 
         nav a:hover {
+            color: #FFFFFF;
+        }
+        
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3CB371;
             color: #000000;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        nav img {
-            width: 20px; 
-            vertical-align: middle; 
-            margin-right: 5px; 
+
+        .top-button:hover {
+            background-color: #2E8B57;
         }
+
 
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <h1>Hello! Welcome to the Gallery page</h1>
-    
-    <nav>
-        <a href="#" onclick="scrollToSection('protecting-animals')">Protecting Animals</a>
-        <a href="#" onclick="scrollToSection('endangered-species')">Endangered Species</a>
-        <a href="#" onclick="scrollToSection('forests')">Forests</a>
-        <a href="#" onclick="scrollToSection('explore-biodiversity')">Explore Biodiversity</a>
-    </nav>
+    <div class="black-box">
+        <h1>Gallery </h1>
+        <a href="#" class="top-button" data-aos="fade-in">Back to Top</a>
+        <nav>
+            <a href="#" onclick="scrollToSection('protecting-animals')">Protecting Animals</a>
+            <a href="#" onclick="scrollToSection('endangered-species')">Endangered Species</a>
+            <a href="#" onclick="scrollToSection('forests')">Forests</a>
+            <a href="#" onclick="scrollToSection('biodiversity')"> Biodiversity</a>
+        </nav>
+    </div>
     <br><br><br><br>
 
-    <div id="protecting-animals">
+    <div id="protecting-animals" data-aos="fade-in">
         <h2>Protecting Animals</h2>
         
         <div class="thumbnail" onclick="showExtendedView(1)">
-            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/_119321813_gettyimages-1149893913.jpg?token=GHSAT0AAAAAACP6I4K36WXFLNY53WQSW3IMZQE7LPQ" alt="Thumbnail Forests" style="max-width: 200px;">
+            <img src="https://www.worldanimalprotection.org/cdn-cgi/image/fit=cover,width=840,format=auto/siteassets/article/1017253.jpg" alt="Image of a cat" style="max-width: 500px;">
         </div>
 
         <div class="extended-view" id="extendedView1">
             <div class="extended-content">
-                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/_119321813_gettyimages-1149893913.jpg?token=GHSAT0AAAAAACP6I4K36WXFLNY53WQSW3IMZQE7LPQ" alt="Full Image 1" style="max-width: 100%;">
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+                <img src="https://www.worldanimalprotection.org/cdn-cgi/image/fit=cover,width=840,format=auto/siteassets/article/1017253.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Helping stray cats and feeding them.</p>
             </div>
         </div>    
         
         <div class="thumbnail" onclick="showExtendedView(2)">
-            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/1011808_1.jpg?token=GHSAT0AAAAAACP6I4K3OK5XIBLKS6QRHAO2ZQE7GOQ" alt="Thumbnail Forests" style="max-width: 200px;">
+            <img src="https://www.worldanimalprotection.org/cdn-cgi/image/fit=cover,width=840,format=auto/siteassets/article/1011808_1.jpg" alt="Image of a donkey" style="max-width: 500px;">
         </div>
 
         <div class="extended-view" id="extendedView2">
             <div class="extended-content">
-                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/1011808_1.jpg?token=GHSAT0AAAAAACP6I4K3OK5XIBLKS6QRHAO2ZQE7GOQ" alt="Full Image 1" style="max-width: 100%;">
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+                <img src="https://www.worldanimalprotection.org/cdn-cgi/image/fit=cover,width=840,format=auto/siteassets/article/1011808_1.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: A boy feeding water to a donkey.</p>
             </div>
         </div> 
 
         <div class="thumbnail" onclick="showExtendedView(3)">
-            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/ph_25391_91965.jpg?token=GHSAT0AAAAAACP6I4K2KO3UZL3HBERXEARGZQE7G3Q" alt="Thumbnail Forests" style="max-width: 200px;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/1_panda_trio_sichuan_china_2011.jpg" alt="Image of pandas" style="max-width: 500px;">
         </div>
 
         <div class="extended-view" id="extendedView3">
             <div class="extended-content">
-                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/ph_25391_91965.jpg?token=GHSAT0AAAAAACP6I4K2KO3UZL3HBERXEARGZQE7G3Q" alt="Full Image 1" style="max-width: 100%;">
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/1_panda_trio_sichuan_china_2011.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Pandas are rarefull animal, These are some of the exsiting pandas.</p>
             </div>
         </div> 
 
         <div class="thumbnail" onclick="showExtendedView(4)">
-            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/rio2016_cats2.jpg?token=GHSAT0AAAAAACP6I4K35OECBIZI7AQJDVMYZQE7HHA" alt="Thumbnail Forests" style="max-width: 200px;">
+            <img src="https://www.wecanchange.co.za/media/post/image003_4UnxFW7.jpg" alt="Image of a dog" style="max-width: 500px;">
         </div>
 
         <div class="extended-view" id="extendedView4">
             <div class="extended-content">
-                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/rio2016_cats2.jpg?token=GHSAT0AAAAAACP6I4K35OECBIZI7AQJDVMYZQE7HHA" alt="Full Image 1" style="max-width: 100%;">
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+                <img src="https://www.wecanchange.co.za/media/post/image003_4UnxFW7.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Taking care of a dog.</p>
             </div>
         </div> 
         
     </div>
 
-    <div id="endangered-species">
+    <br><br><br><br>
+
+    <div id="endangered-species" data-aos="fade-in">
         <h2>Endangered Species</h2>
         
-        <div class="extended-content">
-            <img src="img.jpg" alt="Full Image 1" style="max-width: 100%;">
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
-        </div>        
-        <p>This is the endangered species page. You can add any content related to endangered species here.</p>
-    </div>
-
-    <div id="forests">
-        <h2>Forests Page</h2>
-        
-        <div class="thumbnail" onclick="showExtendedView(3)">
-            <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/forest-1.jpg?token=GHSAT0AAAAAACP6I4K2GGP3Y5XF7MEQZ7ZQZQE6BDA" alt="Thumbnail Forests" style="max-width: 200px;">
+        <div class="thumbnail" onclick="showExtendedView(5)">
+            <img src="https://cdnimgen.vietnamplus.vn/uploaded/wbxx/2023_07_12/tete.jpg" alt="Image of a pangolian" style="max-width: 500px;">
         </div>
 
-        <div class="extended-view" id="extendedView3">
+        <div class="extended-view" id="extendedView5">
             <div class="extended-content">
-                <img src="https://raw.githubusercontent.com/Sithumi-SS/web_design_cw/main/Student%204/images/forest-1.jpg?token=GHSAT0AAAAAACP6I4K2GGP3Y5XF7MEQZ7ZQZQE6BDA" alt="Full Image 1" style="max-width: 100%;">
-                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
+                <img src="https://cdnimgen.vietnamplus.vn/uploaded/wbxx/2023_07_12/tete.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: It is unknown how many Sunda pangolins and Philippine pangolins are left. Population estimates of the endangered giant ground pangolin and white bellied pangolin are also difficult to determine..</p>
             </div>
-        </div>       
-        <p>This is the forests page. You can add any content related to forests here.</p>
+        </div> 
+        
+        <div class="thumbnail" onclick="showExtendedView(6)">
+            <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3986/image/p1300x1300/24780011_edited.webp" alt="Image of a hammer head shark" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView6">
+            <div class="extended-content">
+                <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3986/image/p1300x1300/24780011_edited.webp" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Five out of the nine species of hammerhead sharks are critically endangered—the scalloped hammerhead, the great hammerhead, the smalleye hammerhead, the scalloped bonnethead, and the scoophead shark.</p>
+            </div>
+        </div> 
+        
+        <div class="thumbnail" onclick="showExtendedView(7)">
+            <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3988/image/p1300x1300/AdobeStock_298710942_437483_reduced.webp" alt="Image of a Lemurs" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView7">
+            <div class="extended-content">
+                <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3988/image/p1300x1300/AdobeStock_298710942_437483_reduced.webp" alt="Full Image " style="max-width: 100%;">
+                <p>Description: There are dozens of lemur species, and around two dozen of them are critically endangered, meaning they face imminent threats to their survival as a species.</p>
+            </div>
+        </div> 
+        
+        <div class="thumbnail" onclick="showExtendedView(8)">
+            <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3983/image/p1300x1300/AdobeStock_499583897_437480_reduced.webp" alt="Image of a Spider monkey" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView8">
+            <div class="extended-content">
+                <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3983/image/p1300x1300/AdobeStock_499583897_437480_reduced.webp" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Out of the seven species of spider monkeys, six are endangered or critically endangered. The brown spider monkey is critically endangered and has a decreasing population.</p>
+            </div>
+        </div> 
+
+        <br><br><br><br>
+
+    <div id="forests" data-aos="fade-in">
+        <h2>Forests </h2>
+        
+        <div class="thumbnail" onclick="showExtendedView(9)">
+            <img src="https://www.treehugger.com/thmb/uru_vSPZnYVExZZCzz9EttQWc6A=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/lake-to-sky-1299538498-fffdaedc728148ecae844a38072bf5c2.jpg" alt="Image of a Boreal forest" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView9">
+            <div class="extended-content">
+                <img src="https://d1jyxxz9imt9yb.cloudfront.net/medialib/3983/image/p1300x1300/AdobeStock_499583897_437480_reduced.webp" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Boreal forests, or taiga, are found between 50 and 60 degrees latitude in North America, Asia, and Europe. Beneath boreal forests is land shaped by glaciers that left a legacy in the geology, hydrology, and soils of the area.</p>
+            </div>
+        </div> 
+
+        <div class="thumbnail" onclick="showExtendedView(10)">
+            <img src="https://www.treehugger.com/thmb/3aGuh8gt54JBje0qN6iq37VLBs0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/autumn-colorful-trees-texture-background--1281519650-c0af79b74daf429ea29e62fd6b3835a2.jpg" alt="Image of a Temperate forest" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView10">
+            <div class="extended-content">
+                <img src="https://www.treehugger.com/thmb/3aGuh8gt54JBje0qN6iq37VLBs0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/autumn-colorful-trees-texture-background--1281519650-c0af79b74daf429ea29e62fd6b3835a2.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Temperate forests are located at mid-latitudes, which gives them their characteristic four seasons. Very few patches of old-growth temperate forest remain; the zone is dominated by secondary forests.</p>
+            </div>
+        </div> 
+
+        <div class="thumbnail" onclick="showExtendedView(11)">
+            <img src="https://www.treehugger.com/thmb/dxsBD7iU7t--_zkOVeszPwhB8yk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tropical-dense-cloud-forest-coverd-in-fog--central-africa-184272941-fad00d9ad6cd45328a26b09a43dcf978.jpg" alt="Image of a Tropical forest" style="max-width: 500px;">
+        </div>
+
+        <div class="extended-view" id="extendedView11">
+            <div class="extended-content">
+                <img src="https://www.treehugger.com/thmb/dxsBD7iU7t--_zkOVeszPwhB8yk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/tropical-dense-cloud-forest-coverd-in-fog--central-africa-184272941-fad00d9ad6cd45328a26b09a43dcf978.jpg" alt="Full Image " style="max-width: 100%;">
+                <p>Description: Located between the Tropics of Cancer and Capricorn at 23 degrees north and south, tropical forests are some of the most biodiverse ecosystems on Earth. These forests cover only a tenth of the surface of the planet, yet harbor half of all species..</p>
+            </div>
+        </div> 
+
     </div>
 
-    <div id="explore-biodiversity">
-        <h2>Explore Biodiversity</h2>
-        
-        <div class="extended-content">
-            <img src="img.jpg" alt="Full Image 1" style="max-width: 100%;">
-            <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non eleifend velit. Nullam volutpat, nisi quis convallis posuere.</p>
-        </div>        
-        <p>This is the forests page. You can add any content related to forests here.</p>
-    </div>
+    <br><br><br><br>
+    <div id="biodiversity" data-aos="fade-in">
+    <h2>Biodiversity</h2> 
+    <div id="biodiversity" data-aos="fade-in"></div> 
+    <div class="thumbnail" onclick="showExtendedView(12)"> 
+        <img src="https://thelawyer.africa/wp-content/uploads/2022/03/Biodiversity.png" alt="Image of a biodiversity" style="max-width: 500px;"> 
+    </div> 
+    <div class="extended-view" id="extendedView12"> 
+        <div class="extended-content"> 
+            <img src="https://thelawyer.africa/wp-content/uploads/2022/03/Biodiversity.png" alt="Full Image " style="max-width: 100%;"> 
+            <p>Description: Concept about biodiversity.</p> 
+        </div> 
+    </div> 
+
+    <div id="biodiversity" data-aos="fade-in"></div> 
+    <div class="thumbnail" onclick="showExtendedView(13)"> 
+        <img src="https://www.csuchico.edu/regenerativeagriculture/_assets/images/blog/biodiversity/biodiversity-collage.jpg" alt="Image of a biodiversity." style="max-width: 500px;"> 
+    </div> 
+    <div class="extended-view" id="extendedView13"> 
+        <div class="extended-content"> 
+            <img src="https://www.csuchico.edu/regenerativeagriculture/_assets/images/blog/biodiversity/biodiversity-collage.jpg" alt="Full Image " style="max-width: 100%;"> 
+            <p>Description: Biodiversity changes in the world.</p> 
+        </div> 
+    </div> 
 
     <!-- JavaScript -->
     <script>
@@ -212,14 +309,15 @@
             }
         }
 
-        // JavaScript function for hover effect on thumbnails
-        function hoverEffect(element) {
-            element.style.borderColor = '#3CB371'; 
-        }
-
-        function unHoverEffect(element) {
-            element.style.borderColor = 'transparent'; 
-        }
     </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 300,
+            duration: 1400
+        });
+    </script>
+
 </body>
 </html>
