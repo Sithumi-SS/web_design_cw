@@ -1,0 +1,67 @@
+body, html {
+    background-color: #3CB371;
+}
+.splash-image {
+    width:100%;
+    height: 250px;;
+    margin-bottom: 20px;
+    margin-top: 0;
+
+}
+.Splash-Screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background-color: #3CB371;
+}
+
+.title {
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mission {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color:black;
+    border: 2px solid #3CB371;
+    padding: 10px;
+    background-color: rgb(62, 134, 193);
+    border-radius: 10px;
+}
+
+.head{
+    margin-left: 10px;
+    font-size: 1.4em;
+
+}
+
+.Members {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+.Group Memebers {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #021c0e;
+    border-radius: 50%;
+    border-top: 5px solid #3CB371;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
