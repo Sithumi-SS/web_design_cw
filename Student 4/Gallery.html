@@ -3,145 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Gallery </title>
-    <style>
-        body {
-            font-family: "Montserrat", sans-serif;
-            font-size: larger;
-            color: #000000;
-            background-color: #f2f2f2;
-            text-align: center;
-            margin: 0; 
-        }
-
-        .black-box {
-            background-color: #000;
-            padding: 20px ;
-            color: #fff;
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 10%;
-            z-index: 1000; 
-
-            
-        }
-
-        h1{
-            font-family: "Montserrat", sans-serif;
-            color: wheat;  
-            margin-top: 0; 
-            position: fixed;
-            top: 10px; 
-            left: 20px; 
-            z-index: 10; 
-            padding-left: 45%;
-            
-        }
-        
-        .thumbnail {
-            font-family: "Montserrat", sans-serif;
-            color: solid #000000;
-            display: inline-block;
-            margin: 10px;
-            border: 2px solid transparent;
-            transition: border-color 0.3s;
-            cursor: pointer;
-            width: auto; 
-            height: auto; 
-        }
-
-        .thumbnail img {
-            max-width: 5000px; 
-            height: 200px; 
-        }
-
-        
-        .extended-view {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 100%; 
-            width: 100%;
-            height: 100%;
-            background-color: rgb(0, 0, 0, 0.8);
-            z-index: 9999;
-            overflow: auto;
-            animation: slideFromLeft 0.5s ease forwards; 
-        }
-
-        /* Keyframes for the slide animation */
-        @keyframes slideFromLeft {
-            from {
-                left: 100%;
-            }
-            to {
-                left: 0;
-            }
-        }
-        
-        .extended-content {
-            max-width: 800px;
-            margin: 100px auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .extended-content p {
-            color: #000000;
-        }
-
-        nav {
-            margin-top: 20px;
-            position: fixed;
-            top: 50px; 
-            right: 20px; 
-            left: 30px;
-            z-index: 10; /
-        }
-
-        nav a {
-            margin: 0 10px;
-            text-decoration: none;
-            color:wheat;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            color: #FFFFFF;
-        }
-        
-        .top-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #3CB371;
-            color: #FFFFFF;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .top-button:hover {
-            background-color: #2E8B57;
-        }
-
-
-    </style>
+    <link href="gallery.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 </head>
 <body>
-    <div class="black-box">
-        <h1>Gallery </h1>
-        <a href="#" class="top-button" data-aos="fade-in">Back to Top</a>
-        <nav>
-            <a href="#" onclick="scrollToSection('protecting-animals')">Protecting Animals</a>
-            <a href="#" onclick="scrollToSection('endangered-species')">Endangered Species</a>
-            <a href="#" onclick="scrollToSection('forests')">Forests</a>
-            <a href="#" onclick="scrollToSection('biodiversity')"> Biodiversity</a>
-        </nav>
+
+
+<div class="main">
+    <div class="navbar">
+        <div class="nav-wrapper">
+            <div class="logo-holder">
+                <img src="https://assets-global.website-files.com/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image"/>
+            </div>
+            <div class="nav-links-menu">
+                <a href="#" class="nav-items inline-blocks">
+                    <h5 class="navitems">Gallery</h5>
+                </a>
+                <a href="#" class="nav-items inline-blocks">
+                    <h5 class="navitems">About us</h5>
+                </a>
+                <a href="#" class="nav-items inline-blocks">
+                    <h5 class="navitems">Site map</h5>
+                </a>
+                <a href="#" class="nav-items inline-blocks">
+                    <h5 class="navitems">Feedback form</h5>
+                </a>
+            </div>
+            <div class="button-holder">
+                <a href="#" class="button nav ">SHOP</a>
+                <a href="#" class="button nav donation ">DONATION</a>
+            </div>
+        </div>
     </div>
+    
+
+    
+    <h1>Gallery </h1>
+    <a href="#" class="top-button" data-aos="fade-in">Back to Top</a>
+    <nav>
+        <a href="#" onclick="scrollToSection('protecting-animals')">Protecting Animals</a>
+        <a href="#" onclick="scrollToSection('endangered-species')">Endangered Species</a>
+        <a href="#" onclick="scrollToSection('forests')">Forests</a>
+        <a href="#" onclick="scrollToSection('biodiversity')"> Biodiversity</a>
+    </nav>
+
     <br><br><br><br>
 
     <div id="protecting-animals" data-aos="fade-in">
@@ -317,35 +222,58 @@
             <img src="https://www.csuchico.edu/regenerativeagriculture/_assets/images/blog/biodiversity/biodiversity-collage.jpg" alt="Full Image " style="max-width: 100%;"> 
             <p>Description: Biodiversity changes in the world.</p> 
         </div> 
-    </div> 
-
-    <!-- JavaScript -->
-    <script>
-        function scrollToSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            section.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'start' });
-        }
-
-        // JavaScript function to show extended view
-        function showExtendedView(id) {
-            var extendedView = document.getElementById("extendedView" + id);
-            extendedView.style.display = "block";
-            window.onclick = function(event) {
-                if (event.target == extendedView) {
-                    extendedView.style.display = "none";
-                }
-            }
-        }
-
-    </script>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            offset: 300,
-            duration: 1400
-        });
-    </script>
+    </div>
+    
+    <div class="section-wrapper bfrl">
+        <div class="container-wrapper">
+            <div class="Footer-form-wrapper mian-form">
+                <form id="wf-form-Footer-form-wrapper" name="wf-form-Footer-form-wrapper" data-name="Footer Form Two" method="get" class="footer-form-container-two" data-wf-page-id="660285614eba907d57252635" data-wf-element-id="a3464f63-cd04-3370-9e16-54e5f58bd218">
+                    <div class="footer-form-title">Send us an email</div>
+                    <div class="Footer-form-get-email">
+                        <input class="footer-form-input form-input" maxlength="256" name="Footer-Email-Two" data-name="Footer Email Two" aria-label="Enter your email" placeholder="Enter your email" type="email" id="Footer-Email-Two" required=""/>
+                        <input type="submit" data-wait="Please wait..." class="button-primary footer-form-button " value="Subscribe Now"/>
+                    </div>
+                </form>
+                <div class="mian-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="mian-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+    
+    
+    <div class="footer-link-wrapper">
+        <div class="footer-link-holder">
+            <a href="#" class="footer-links">About us</a>
+            <a href="#" class="footer-links">Gallery</a>
+            <a href="#" class="footer-links">About us</a>
+            <a href="#" class="footer-links">Site Map</a>
+            <a href="#" class="footer-links">Shop</a>
+        </div>
+        <div class="footer-sm-links-holder">
+            <a href="#" class="footer-sm-links inline-blocks">
+                <img src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a705912aaeb_facebook%20big%20filled.svg" loading="lazy" alt=""/>
+            </a>
+            <a href="#" class="footer-sm-links inline-blocks">
+                <img src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124ab37a12aaf0_twitter%20big.svg" loading="lazy" alt=""/>
+            </a>
+            <a href="#" class="footer-sm-links inline-blocks">
+                <img src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a61f512aaed_instagram%20big.svg" loading="lazy" alt=""/>
+            </a>
+            <a href="#" class="footer-sm-links inline-blocks">
+                <img src="https://assets-global.website-files.com/62434fa732124a0fb112aab4/62434fa732124a717f12aaea_youtube%20small.svg" loading="lazy" alt=""/>
+            </a>
+        </div>
+    </div>
+    <div class="footer-divider-two"></div>
+    <div class="footer-bottom">
+        <div class="footer-copyright">© 2022 Company name. All rights reserved</div>
+        <div class="footer-legal-block">
+            <a href="#" class="footer-legal-link">Terms Of Use</a>
+            <a href="#" class="footer-legal-link">Privacy Policy</a>
+        </div>
+    </div>
 
 </body>
 </html>
